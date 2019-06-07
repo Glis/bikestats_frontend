@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bikestats: Bikesantiago</title>
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/application.js"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>BikeSantiago Statistics</h2>
+      </div>
+      <div class="col-12 col-sm-3 py-2">
+        <select id="station-selector" class='form-control'></select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>Station: <span id="station-name">Station</span></h2>
+        <p>
+          <strong>Last update:</strong>
+          <span id="station-last-update">N/A</span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <h2>Total bikes: <span id="station-total">N/A</span></h2>
+      </div>
+      <div class="col-4">
+        <h2 class="text-center">Used bikes: <span id="station-used">N/A</span></h2>
+      </div>
+      <div class="col-4">
+        <h2 class="text-right">Free bikes: <span id="station-free">N/A</span></h2>
+        <p id="station-free"></p>
+      </div>
+    </div>
+    <div id="chart"></div>
+    <div class="row"><div class="col-12 text-right">Jorge Fuentes @2019</div></div>
+  </div>
+</body>
+</html>
