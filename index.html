@@ -12,9 +12,22 @@
   <script src="js/application.js"></script>
   <!-- Styles -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/application.css">
 </head>
 <body>
-  <div class="container-fluid">
+  <!-- Loader -->
+  <div id="loading" class="fullpage-wrapper">
+    <h2>Loading stations info from the API... Please wait</h2>
+    <div class="loader"></div>
+  </div>
+  <!-- Error message for failed requests -->
+  <div id="loading-error" class="fullpage-wrapper" hidden>
+    <h2>There was an error connecting to the API.</h2>
+    <a class="btn btn-primary" href="#">Reload</a>
+  </div>
+  <!-- Content -->
+  <div id="content-wrapper" class="container-fluid" hidden>
+    <!-- Station information -->
     <div class="row">
       <div class="col">
         <h1>BikeSantiago Statistics</h2>
@@ -44,7 +57,9 @@
         <p id="station-free"></p>
       </div>
     </div>
+    <!-- The chart -->
     <div id="chart"></div>
+    <!-- Copyright -->
     <div class="row"><div class="col-12 text-right">Jorge Fuentes @2019</div></div>
   </div>
 </body>
